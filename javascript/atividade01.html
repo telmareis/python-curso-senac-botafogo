@@ -1,0 +1,20 @@
+<script>
+    var nome, not1, not2, media, resultado;
+
+    nome = prompt("Qual o nome do aluno? ", "");
+    not1 = prompt("Digite a primeira nota:", "");
+    not2 = prompt("Digite a segunda nota: ","");
+
+    media = (parseInt(not1) + parseInt(not2))/2;
+
+    if(media > 6.5) 
+    {
+      resultado = "Aprovado";
+    } else 
+    {
+      resultado = "Reprovado";
+    }
+    document.write(nome + "</BR>");
+    document.write("Média : " + media + "</BR>");
+    document.write(resultado);
+</script>
