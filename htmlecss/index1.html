@@ -6,7 +6,7 @@
   <title>Document</title>
 </head>
 <body>
-  <p>1<sup>2</sup> =  <span id="resultado"></span></p>
+  <p>1<sup>2</sup> =  <span id="resultado1"></span></p>
   <p>2<sup>2</sup> =  <span id="resultado2"></span></p>
   <p>3<sup>2</sup> =  <span id="resultado3"></span></p>
   <p>4<sup>2</sup> =  <span id="resultado4"></span></p>
@@ -28,8 +28,10 @@
   <p>20<sup>2</sup> =  <span id="resultado20"></span></p>
   <script>
    
-  console.log(1 ** 2);
-
+  for (let i = 1; i <= 20; i++) {
+    let id = "resultado" + i;
+    document.getElementById(id).innerHTML = i ** 2;
+  }
 
   </script> 
 </body>
