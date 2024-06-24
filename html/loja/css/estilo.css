@@ -1,0 +1,21 @@
+#barra{ 
+    background-color: rgb(182, 130, 165);
+    height: 70px;
+}
+#conteudo{
+    background-color: aqua;
+    height: 740px;
+    text-align: center;
+}
+#rodape{
+    background-color: aquamarine;
+    height: 70px;   
+}
+#secao{
+    display: flex;
+    justify-content: center;
+    background-color: beige;
+}
+#table{
+    text-align: center;
+}
