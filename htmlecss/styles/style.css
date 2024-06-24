@@ -1,0 +1,22 @@
+.palavra-cruzada {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr); /* 18 colunas */
+  grid-template-rows: repeat(10, 1fr); /* 10 linhas */
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: repeat(18, 1fr); /* 18 colunas */
+}
+
+.celula {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 1px;
+  background-color: aliceblue;
+}
+
+
+
