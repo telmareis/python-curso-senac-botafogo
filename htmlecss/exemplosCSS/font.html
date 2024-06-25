@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font - CSS</title>
+
+    <style>
+        h1{
+            color: blue;
+            font-family: Verdana;
+            font-size: 300%;
+        }
+        p{
+            color: red;
+            font-family: courrier;
+            font-size: 160%;
+        }
+        p.one{
+            border-style: dotted;
+            border-width: 5px;
+            border-color: green;
+        }
+        p.solid{
+            border-style: solid;
+            border-width: 10px;
+            border-color: red;
+        }
+        p.mix{
+            border-style: dotted dashed solid double;
+            border-color: blueviolet;
+        }
+        p.alter{
+            border-top-style: solid;
+            border-bottom-style: solid;
+            border-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Primeiro parágrafo</h1>
+    <p>Outro formato</p>
+    <h2>Propriedades border-style</h2>
+
+    <p class="one">Borda do tipo dotted.</p>
+    <p class="solid">Borda do tipo solid.</p>
+    <p class="mix">Bordas misturadas.</p>
+    <p class="alter">Bordas em lados específicos.</p>
+
+</body>
+</html>
