@@ -1,11 +1,11 @@
-.image { 
-  width: 200px; 
+.div-centralizada {
+  width: 200x;
   height: 200px; 
-  margin: 20px; 
-  position: center;
+  margin: 0 auto; 
+  margin-top: 50px; 
 }
-img {
+a {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  margin-top: 50px;
 }
