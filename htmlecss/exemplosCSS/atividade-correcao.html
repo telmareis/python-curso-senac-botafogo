@@ -6,30 +6,31 @@
 
     <title>Tabela</title>
     <style>
-    table {
-        border: 1px solid black;
+    table 
+    #lista {
+        font-family: "trebuchet MS", Arial, Helvetica, sans-serif;
         border-collapse: collapse;
-        background-color: #f5f5f5;
         width: 100%;
-
       }
-      
-      th, td {
+      #lista td, #lista th {
         padding: 8px;
-        text-align: left;
+        border: 1px solid #ddd;
       }
-      
-      tr:nth-child(even) {
-        background-color: #fff;
-      }
+      #lista tr:nth-child(even) {background-color: #f2f2f2;}
 
-      tr:hover {
-        background-color: #07fb0f;
+      #lista tr:hover {background-color: #ddd;}
+      
+      #lista th {
+        padding-top: 12px;
+        padding-bottom: 12p;
+        text-align: left;
+        background-color:#1ece24;
+        color:white;
       }
     </style>
 </head>
 <body>
-<table border:cellpadding= “1” cellpacing= “0” height =”200”>
+    <table border:cellpadding= “1” cellpacing= “0” height =”200”>
     <tr>
         <th>Nome</th>
         <th>Idade</th>
@@ -50,7 +51,6 @@
         <td>44</td>
         <td>Macaé</td>
     </tr>
-
 </table>
 </body>
 </html>
