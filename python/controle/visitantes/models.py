@@ -1,69 +1,62 @@
 from django.db import models
 
 class Visitante(models.Model):
-    nome_completo = models.CharField(
-        verbose_name = "Nome Completo",
-        max_length = 150,
-    )
-
-    cpf = models.CharField(
-        verbose_name = "CPF",
-        max_length = 11,
-    )
-
-    data_nascimento = models.DateField(
-        verbose_name = "Data de Nascimento",
-        auto_now = False,
-        auto_now_add = False,
-    )
-
-    numero_da_casa = models.CharField(
-        verbose_name = "Número da Casa",
-        max_length = 11,
-    )
-
-    placa_do_carro = models.CharField(
-        verbose_name = "Placa do Carro",
-        max_length = 11,
-    )
-    
-    numero_da_casa = models.CharField(
-        verbose_name = "Número da Casa",
-        max_length = 11,
-    )
-
-    hora_da_chegada = models.DateTimeField(
-        verbose_name = "Hora de chegada na portaria",
-        auto_now_add=True,
-    )
-    
-    hora_da_saida = models.DateTimeField(
-        verbose_name = "Hora de saída do condomínio",
-        auto_now_add=False,
-        blank=True,
-        null=True
-    )
-
-    hora_da_autorizacao = models.DateTimeField(
-        verbose_name = "Hora de autorização de entrada",
-        max_length = 11,
-        auto_now_add=False,
-    )
-
-    nome_do_morador = models.CharField(
-        verbose_name = "Nome do Morador",
-        max_length = 100,
-    )
-
-    porteiro_que_autorizou = models.CharField(
-        verbose_name = "Porteiro que Autorizou",
-        max_length = 100,
-    )
-
     registrado_por = models.ForeignKey(
         "porteiros.Porteiro",
         verbose_name="Porteiro responsável pelo registro",
         on_delete=models.PROTECT,
+    )
+
+    nome_completo = models.CharField(
+        verbose_name="Nome Completo",
+        max_length=150,
+    )
+
+    cpf = models.CharField(
+        verbose_name="CPF",
+        max_length=11,
+    )
+
+    data_nascimento = models.DateField(
+        verbose_name="Data de Nascimento",
+        auto_now_add=False,
+        auto_now=False,
+    )
+
+    numero_casa = models.PositiveSmallIntegerField(
+        verbose_name="Número da casa a ser visitada",
+    )
+
+    placa_veiculo = models.CharField(
+        verbose_name="Placa do Veículo",
+        max_length=7,
+        blank=True,
+        null=True,
+    )
+
+    horario_chegada = models.DateTimeField(
+        verbose_name="Horário de Chegada na Portaria",
+        auto_now_add=True,
+    )
+
+    horario_saida = models.DateTimeField(
+        verbose_name="Horário de saída do condomínio",
+        auto_now=False,
+        blank=True,
+        null=True,
+    )
+
+    horario_autorizacao = models.DateTimeField(
+        verbose_name="Horário de Autorização de Entrada",
+        auto_now=False,
+        blank=True,
+        null=True,
+    )
+
+    morador_responsavel = models.CharField(
+        verbose_name="Nome do morador responsável por autorizar a entrada",
+        max_length=50,
+        blank=True,
     )
 
     class Meta:
@@ -72,4 +65,4 @@ class Visitante(models.Model):
         db_table="visitante"
 
     def __str__(self):
-        return self.nome_completo
+        return self.nome_completo    
