@@ -1,11 +1,19 @@
 from django.db import models
 
 class Visitante(models.Model):
+    """
+    registrado_por = models.CharField(
+        verbose_name="Nome Completo",
+        max_length=150,
+    )
+    """
+    
     registrado_por = models.ForeignKey(
         "porteiros.Porteiro",
         verbose_name="Porteiro responsável pelo registro",
         on_delete=models.PROTECT,
     )
+    
 
     nome_completo = models.CharField(
         verbose_name="Nome Completo",
