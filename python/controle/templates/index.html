@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Controle de Visitantes</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
     <style>
         body {
             background-color: #c7ede4;
@@ -26,6 +27,7 @@
 
 <body>
     <div class="container-fluid">
+        <h1 class="h3 mb-0 text-gray-800">{{ nome_pagina }}</h1>
         <div class="row">
             <nav class="col-md-2 Sidebar d-none d-md-block bg-light">
                 <div class="sidebar">
@@ -85,9 +87,24 @@
                     <th>CHEGADA</th>
                     <th>SAÍDA</th>
                     <th>AUTORIZADO POR</th>
+                    <th>VER INFORMAÇÕES</th>
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                {% for variavel in todos_visitantes %}
+                    <td>{{variavel.nome_completo}}</td>
+                    <td>{{variavel.cpf}}</td>
+                    <td>{{variavel.horario_chegada}}</td>
+                    <td>{{variavel.horario_autorizacao}}</td>
+                    <td>{{variavel.morador_responsavel}}</td>
+                    <td>
+                        <a href="#">
+                            Ver informações
+                        </a>
+                    </td>    
+            </tr>
+            {% endfor %} 
                 <tr>
                     <td></td>
                     <td></td>
@@ -153,7 +170,6 @@
                 </tr>
             </tbody>
         </table>
-    </div>
+    </div> 
 </body>
-
 </html>
