@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        .vertical {
+            width: 15%; /* Largura da div vertical */
+            background-color: #59af4c8f; /* Cor de fundo */
+            color: white;
+            padding: 10px;
+        
+        }
+
+        .horizontal {
+            flex: 1; /* As divs horizontais dividem igualmente o espaço */
+            background-color: #2195f388; /* Cor de fundo */
+            color: white;
+            padding: 25px;
+            margin: 5px; /* Espaçamento entre as divs horizontais */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 75%; /* Largura total do container */
+        }
+
+        .table-container {
+            margin-top: 20px;
+            overflow-x: auto; /* Para permitir rolagem em telas pequenas */
+        }
+
+        table {
+            width: 100%; /* Tabela ocupará toda a largura */
+            border-collapse: collapse; /* Para não ter espaços entre as células */
+        }
+
+        th, td {
+            border: 1px solid black; /* Bordas da tabela */
+            padding: 10px;
+            text-align: center; /* Centralizar texto */
+        }
+
+        th {
+            background-color: #f2f2f2; /* Cor de fundo para cabeçalho */
+        }
+    </style>
+</head>
+<body>
+    <div class="vertical">
+        <h2>CONTROLE DE VISITANTES</h2>
+        <p>HOME</p>
+    </div>
+    <div class="container">
+        <div class="horizontal">
+
+            <h2>VISITANTES AGUARDANDO AUTORIZAÇÃO</h2>
+        </div>
+        <div class="horizontal">
+            <h2>VISITANTES NO CONDOMÍNIO</h2>
+        </div>
+        <div class="horizontal">
+            <h2>VISITAS FINALIZADAS</h2>
+        </div>
+        <div class="horizontal">
+            <h2>VISITANTES REGISTRADOS NO MÊS ATUAL</h2>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NOME COMPLETO</th>
+                        <th>CPF</th>
+                        <th>CHEGADA</th>
+                        <th>SAÍDA</th>
+                        <th>AUTORIZADO POR</th>
+                        <th>VER INFORMAÇÕES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                  </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

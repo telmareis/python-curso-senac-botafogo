@@ -37,6 +37,9 @@
                             <a class="nav-link active" href="#">HOME</a>
                         </li>
                     </ul>
+                    <main>
+                        <a href="page2.html">CADASTRAR VISITANTES</a>
+                    </main>
                 </div>
             </nav>
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
@@ -171,5 +174,21 @@
             </tbody>
         </table>
     </div> 
+    <script>
+        // Função para obter parâmetros da URL
+        function getQueryParams() {
+            const params = new URLSearchParams(window.location.search);
+            return params;
+        }
+        // Função para exibir os dados
+        function exibirDados() {
+            const params = getQueryParams();
+            const nome = params.get('nome');
+            const email = params.get('email');
+            document.getElementById('dados').innerHTML = `<p>Nome: ${nome}</p><p>Email: ${email}</p>`;
+        }
+        // Chamada da função
+        exibirDados();
+    </script>
 </body>
 </html>
