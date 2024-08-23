@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+{% load static %}
+
 <html lang="pt-br">
 
 <head>
@@ -54,6 +56,9 @@
         <a href="index.html">Voltar para página inicial</a>
     </main>
     <form action="#" method="post">
+        <label for="porteiroAutorizou">Porteiro responsável pelo registro:</label>
+        <input type="text" id="porteiroAutorizou" name="Porteiro responsável pelo registro" required>
+
         <label for="nomeCompleto">Nome Completo:</label>
         <input type="text" id="nomeCompleto" name="Nome Completo" required>
 
@@ -63,28 +68,25 @@
         <label for="dataNascimento">Data de Nascimento:</label>
         <input type="date" id="dataNascimento" name="Data de Nascimento" required>
 
-        <label for="numeroCasa">Número da Casa:</label>
+        <label for="numeroCasa">Número da casa a ser visitada:</label>
         <input type="text" id="numeroCasa" name="Número da casa a ser visitada" required>
 
         <label for="placaVeiculo">Placa do Veículo:</label>
         <input type="text" id="placaVeiculo" name="Placa do Veículo" required>
 
-        <label for="horaChegada">Hora da Chegada:</label>
-        <input type="time" id="horaChegada" name="Hora da chegada" required>
+        <label for="horaSaida">Horário de saída do condomínio:</label>
+        <input type="time" id="horaSaida" name="Horário de saída do condomínio" required>
 
-        <label for="horaSaida">Hora da Saída:</label>
-        <input type="time" id="horaSaida" name="Hora de saída co condomínio" required>
+        <label for="horaAutorizacao">Horário de Autorização de Entrada:</label>
+        <input type="time" id="horaAutorizacao" name="Horário de Autorização de Entrada" required>
 
-        <label for="horaAutorizacao">Hora da Autorização:</label>
-        <input type="time" id="horaAutorizacao" name="Hora da Autorização" required>
-
-        <label for="nomeMorador">Nome do Morador:</label>
-        <input type="text" id="nomeMorador" name="Nome do morador" required>
-
-        <label for="porteiroAutorizou">Porteiro que Autorizou:</label>
-        <input type="text" id="porteiroAutorizou" name="Horário de Autorização de Entrada" required>
+        <label for="nomeMorador">Nome do morador responsável por autorizar a entrada:</label>
+        <input type="text" id="nomeMorador" name="Nome do morador responsável por autorizar a entrada" required>
 
         <input type="submit" value="Enviar">
     </form>
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
 </body>
 </html>
