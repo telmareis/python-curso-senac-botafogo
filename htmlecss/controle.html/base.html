@@ -33,60 +33,9 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <h1 class="h3 mb-0 text-gray-800">{{ nome_pagina }}</h1>
-        <div class="row">
-            <nav class="col-md-2 Sidebar d-none d-md-block bg-light">
-                <div class="sidebar">
-                    <h4>CONTROLE DE VISITANTES</h4>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">HOME</a>
-                        </li>
-                    </ul>
-                    <main>
-                        <a href="page2.html">CADASTRAR VISITANTES</a>
-                    </main>
-                </div>
-            </nav>
-            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-                <h1></h1>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">VISITANTES AGUARDANDO AUTENTICAÇÃO</h5>
-                                <p class="card-text">.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">VISITANTES NO CONDOMÍNIO</h5>
-                                <p class="card-text">.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">VISITAS FINALIZADAS</h5>
-                                <p class="card-text">.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">VISITANTES REGISTRADOS NO MÊS ATUAL</h5>
-                                <p class="card-text">.</p>
-                            </div>
-                        </div>
-                    </div>
-            </main>
-        </div>
-    </div>
+
+    {% block conteudo %} {% endblock conteudo%}
+
     <div class="container mt-5">
         <h2>VISITANTES RECENTES</h2>
         <table class="table table-striped">
@@ -204,4 +153,3 @@
       
 </body>
 </html>
-                     
