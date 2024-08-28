@@ -2,6 +2,9 @@
 
 {% load static %}
 
+{% load widget_tweaks %}
+
+
 <html lang="pt-br">
 
 <head>
@@ -53,27 +56,22 @@
 <body>
     <h2>Registro de Visitantes</h2>
 
-    <p class="mb-5 ml=1">
+    <p class="mb-5 ml-1">
         <small>
             (*) Campo obrigatório
         </small>
     </p>
-    <main>
-        <a href="index.html">Voltar para página inicial</a>
-    </main>
 
-    <form action="#" method="post">
-
+    <form method="post">
         <div class="form-row">
             {% csrf_token %}
 
             {% for field in form %}
-                <div class="form-group col-md-12">
-                    <label>{{ field.label }}</label>
-                    {% if field.field.required %} * {% endif %}
-                    {% render_field field placeholder=field.label class="form-control" %}
-    
-                </div>
+            <div class="form-group col-md-12">
+                <label>{{ field.label }}</label>
+                {% if field.field.required %} * {% endif %}
+                {% render_field field placeholder=field.label class="form-control" %}
+            </div>
             {% endfor %}
         </div>
 
@@ -82,35 +80,6 @@
                 <span class="text">Registrar Visitante</span>
             </button>
         </div>
-
-        <label for="porteiroAutorizou">Porteiro responsável pelo registro:</label>
-        <input type="text" id="porteiroAutorizou" name="Porteiro responsável pelo registro" required>
-
-        <label for="nomeCompleto">Nome Completo:</label>
-        <input type="text" id="nomeCompleto" name="Nome Completo" required>
-
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf" required>
-
-        <label for="dataNascimento">Data de Nascimento:</label>
-        <input type="date" id="dataNascimento" name="Data de Nascimento" required>
-
-        <label for="numeroCasa">Número da casa a ser visitada:</label>
-        <input type="text" id="numeroCasa" name="Número da casa a ser visitada" required>
-
-        <label for="placaVeiculo">Placa do Veículo:</label>
-        <input type="text" id="placaVeiculo" name="Placa do Veículo" required>
-
-        <label for="horaSaida">Horário de saída do condomínio:</label>
-        <input type="time" id="horaSaida" name="Horário de saída do condomínio" required>
-
-        <label for="horaAutorizacao">Horário de Autorização de Entrada:</label>
-        <input type="time" id="horaAutorizacao" name="Horário de Autorização de Entrada" required>
-
-        <label for="nomeMorador">Nome do morador responsável por autorizar a entrada:</label>
-        <input type="text" id="nomeMorador" name="Nome do morador responsável por autorizar a entrada" required>
-
-        <input type="submit" value="Enviar">
     </form>
 
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>

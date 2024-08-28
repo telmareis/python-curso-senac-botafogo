@@ -7,7 +7,7 @@ def registrar_visitante(request):
     if request.method == "POST":
         form = VisitanteForm(request.POST)
 
-        if form.is_valid():     
+        if form.is_valid():
             visitante = form.save(commit = False)
             visitante.registrado_por = request.user.porteiro
             visitante.save()
