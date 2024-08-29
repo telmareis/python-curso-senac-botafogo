@@ -19,5 +19,19 @@ class VisitanteForm(forms.ModelForm):
             'numero_casa': forms.TextInput(attrs={'class': 'form-control'}),
             'placa_veiculo': forms.TextInput(attrs={'class': 'form-control'}),
         }
-
+        criar_mensagens = {
+            "nome_completo":{
+                "required": "O nome completo é obrigatório"
+            },
+            "cpf": {
+                "required": "O CPF é um campo obrigatório"
+            },
+            "data_nascimento":{
+                "required": "A data é obrigatória",
+                "invalid": "A data precisa ter o formato DD/MM/AAAA"
+            },
+            "numero_casa": {
+                "required": "O número da casa é um campo obrigatório"
+            },
+        }
        
