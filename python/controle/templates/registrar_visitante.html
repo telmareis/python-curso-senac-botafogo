@@ -63,6 +63,7 @@
     </p>
 
     {% if form.errors %}
+<<<<<<< HEAD
         {% for field in form %}
             {% if field.errors %}
                 {% for erro in field.errors %}
@@ -74,6 +75,18 @@
         {% endfor %}
     {% endif %}
 
+=======
+              {% for field in form %}
+                {% if field.errors %}
+                  {% for erro in field.errors %}
+                    <div class = "alert alert-warning" role="alert">
+                      {{ erro }}
+                    </div>
+                  {% endfor %}
+                {% endif %}  
+              {% endfor %}
+            {% endif %}
+>>>>>>> a28a4823e10ba0c763df51bf9e7cd77d62e43dc4
 
     <form method="post">
         <div class="form-row">

@@ -12,6 +12,7 @@ def registrar_visitante(request):
         if form.is_valid():
             visitante = form.save(commit = False)
             visitante.registrado_por = Porteiro.objects.get(id=1)
+<<<<<<< HEAD
             
             visitante.save()
             
@@ -21,6 +22,16 @@ def registrar_visitante(request):
             )
             
             
+=======
+
+            visitante.save()
+
+            messages.success(
+                request,
+                "O visitante foi registrado com sucesso!"
+            )
+            
+>>>>>>> a28a4823e10ba0c763df51bf9e7cd77d62e43dc4
             return redirect("index")
 
     context = {
