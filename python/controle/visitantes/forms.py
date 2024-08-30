@@ -11,7 +11,22 @@ class VisitanteForm(forms.ModelForm):
             "numero_casa",
             "placa_veiculo",
         )
-        
+
+        error_messages = {
+            "nome_completo": {
+                "required": "O nome completo é obrigatório"
+            },
+            "cpf": {
+                "required": "O CPF é um campo obrigatório"
+            },
+            "data_nascimento": {
+                "required": "A data é obrigatória",
+                "invalid": "A data precisa ter o formato DD/MM/YYYY"
+            },
+            "numero_casa": {
+                "required": "O número da casa é um campo obrigatório"
+            }
+        }
         widgets = {
             'nome_completo': forms.TextInput(attrs={'class': 'form-control'}),
             'cpf': forms.TextInput(attrs={'class': 'form-control'}),
